@@ -34,7 +34,8 @@ function displayResults(weather) {
 
      let weather_elm = document.querySelector('.current .weather');
      weather_elm.innerText = weather.weather[0].main
-
+     let theWeather = weather.weather[0].main
+     animate(theWeather)
      let hilow = document.querySelector('.hi-low');
      hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
@@ -50,6 +51,13 @@ function dateBuilder(d) {
 
      return `${day} ${date} ${month} ${year}`
 }
-
+const animate = (weather) => {
+     let weatherIcon = document.querySelector('.weatherIcon');
+     weatherIcon.innerHTML = `
+     <img src="/images/${weather}.png" alt="${weather} weather photo" class="icon">
+     <img src="/images/${weather}.png" alt="${weather} weather photo" class="icon icon2">
+     <img src="/images/${weather}.png" alt="${weather} weather photo" class="icon icon3">
+     `
+}
 // make it EC6
 // change bg based on weather
