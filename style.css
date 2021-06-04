@@ -16,6 +16,7 @@ body {
      flex-direction: column;
      min-height: 100vh;
      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+     justify-content: center;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
      justify-content: center;
      align-items: center;
      padding: 50px 15px 15px;
+     margin-top: 50px;
 }
 
 header input {
@@ -94,19 +96,21 @@ main {
      width: 100vw;
      height: 300px;
      position: fixed;
-     margin-top: 60vh;
-     animation: 2s linear infinite alternate weatherIcon;
+     margin-top: 55vh;
+     animation: 1.5s linear infinite alternate weatherIcon;
+     display: flex;
+     justify-content: center;
 }
 
 .weatherIcon .icon {
-     height: 100%;
-     width: 100%;
+     height: 90%;
+     width: 90%;
      object-fit: contain;
      opacity: 0.7;
 }
 
 @keyframes weatherIcon {
      100% {
-          transform: scale(1.5);
+          transform: scale(1.3);
      }
 }
